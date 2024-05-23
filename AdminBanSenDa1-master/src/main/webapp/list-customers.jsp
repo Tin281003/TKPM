@@ -229,6 +229,7 @@
                                             <%}%>
                                             <% } else { %>
                                             <% } %>
+                                            <!-- Amin Click vào nút chỉnh sửa để sửa thông tin v sẽ chuyển tới edit-user.jsp -->
                                             <a href="./EditUser?makh=<%=customer.getMAKH()%>" class="main__table-btn main__table-btn--edit">
                                                 <i class="fa fa-edit"></i>
                                             </a>
