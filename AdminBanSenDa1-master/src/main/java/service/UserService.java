@@ -181,7 +181,7 @@ public class UserService {
             se.printStackTrace();
         }
     }
-    
+
     public static boolean updateProfile(String name, String sdt, String diachi, String mail, User auth)  {
         String idACC = auth.getId();
         String sql = "UPDATE CUSTOMERS, ACCOUNTS set CUSTOMERS.ADDRESS = '"+diachi+"', " +
@@ -190,7 +190,7 @@ public class UserService {
                 " WHERE CUSTOMERS.id = '"+idACC+"' and CUSTOMERS.id = ACCOUNTS.id";
         Statement stm  =  DBConnect.getInstall().get();
         try {
-            // 8. Thực hiện câu lệnh executeUpdate(sql)
+            // 7. Thực hiện câu lệnh executeUpdate(sql)
             stm.executeUpdate(sql);
             auth.setName(name);
             auth.setEmail(mail);
