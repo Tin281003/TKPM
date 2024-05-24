@@ -5,7 +5,7 @@
   <artifactId>AdminBanSenDa</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>AdminBanhKem Maven Webapp</name>
+  <name>AdminSenda Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -31,7 +31,7 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>AdminBanhKem</finalName>
+    <finalName>AdminSenda</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
