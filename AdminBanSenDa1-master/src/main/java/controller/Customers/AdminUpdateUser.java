@@ -33,7 +33,7 @@ public class AdminUpdateUser extends HttpServlet {
 
         String makh = request.getParameter("makh");
         String r = request.getParameter("role");
-
+        // kiểm tra có quyền thay đổi thông tin hoặc không
         int role = 0;
         if(r.equals("Thường")){
             role = 0;

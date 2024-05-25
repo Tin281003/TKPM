@@ -237,7 +237,6 @@
 <%--                                                <i class="fa fa-trash"></i>--%>
 <%--                                            </a>--%>
                                         </div>
-
                                     </td>
                                 </tr>
                             <!-- modal status lock-->
