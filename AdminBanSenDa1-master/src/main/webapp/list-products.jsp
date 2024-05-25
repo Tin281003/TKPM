@@ -10,7 +10,7 @@
 <html lang="xzz">
 <meta http-equiv="Content-Type" charset="UTF-8">
 
-<!-- 1. Hiển thị danh sách sản phẩm -->
+<!-- 1.	Hệ thống hiển thị danh sách sản phẩm. -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -273,7 +273,7 @@
                                         <i class="fas fa-eye-slash"></i>
                                     </a>
                                     <%} else {%>
-                                    <!-- 2. Nhấn mục "Xoá" -->
+                                    <!-- 2. Chọn nút "Xoá" -->
                                     <a href="#modal-hiden<%=pro.getId()%>"
                                        class="main__table-btn main__table-btn--banned open-modal">
                                         <i class="fa fa-eye" style="color: #24cc63"></i>
@@ -320,17 +320,17 @@
                                     <h6 class="modal__title">Xóa Sản Phẩm</h6>
                                     <p class="modal__text">Bạn có chắc muốn xóa sản phẩm này?</p>
 
-                                    <!-- 5. Gọi đến servlet DeleteProduct-->
+                                    <!-- 5. Gọi đến servlet DeleteProduct -->
                                     <%String urlq = "DeleteProduct?masp=" + pro.getId();%>
                                     <div class="modal__btns">
-                                        <!-- 4. Nhấn mục "xoá" -->
+                                        <!-- 4. Chọn nút "Xoá" -->
                                         <button class="modal__btn modal__btn--apply" onclick="changeHref('<%=urlq%>')"
                                                 type="button">Xóa
                                         </button>
-                                        <!-- 4.a Nhấn mục quay lại -->
+                                        <!-- 4.a Chọn nút "Quay lại" -->
 
                                         <button class="modal__btn modal__btn--dismiss" type="button">Quay lại</button>
-                                        <!-- 4.b Hiển thị danh sách sản phẩm -->
+                                        <!-- 4.b Hệ thống hiển thị danh sách sản phẩm -->
 
                                     </div>
                                 </div>
