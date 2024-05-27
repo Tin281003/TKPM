@@ -109,6 +109,8 @@
     List<String> statusName = (List<String>) request.getAttribute("listStatus");%>
 <main class="main bg-white">
     <div class="container-fluid bg-white">
+
+<%--       4.2.7. Display Edit Order OI -> 4.2.8. Edit Order -> --%>
         <!-- main title -->
         <div class="col-12">
             <div class="main__title">
@@ -204,6 +206,7 @@
                                         </div>
                                     </div>
 
+<%--                                    4.2.9. Save data --%>
                                     <div class="col-6 mt-lg-4">
 <%--                                        <input class="form__btn" type="submit" value="Lưu thông tin">--%>
                                         <button onclick="editOrderUpdateDelivery()" type="button" class="form__btn flex-row-reverse">Lưu thay đổi</button>
@@ -263,22 +266,6 @@
                                                                value="" placeholder="Vui lòng nhập chính xác mã sản phẩm..." required>
                                                         <p id="error" class="text-danger mb-2"></p>
 
-                                                        <!-- Search hint -->
-<%--                                                        <div class="header-search-history">--%>
-<%--                                                            <h3 class="header-search-history-heading">Lịch sử tìm kiếm</h3>--%>
-<%--                                                            <ul class="header-search-history-list">--%>
-<%--                                                                <li class="header-search-history-item">--%>
-<%--                                                                    <a href="">Bông tai</a>--%>
-<%--                                                                </li>--%>
-<%--                                                                <li class="header-search-history-item">--%>
-<%--                                                                    <a href="">Ốp điện thoại IP</a>--%>
-<%--                                                                </li>--%>
-<%--                                                                <li class="header-search-history-item">--%>
-<%--                                                                    <a href="">Bông tai dáng dài</a>--%>
-<%--                                                                </li>--%>
-<%--                                                            </ul>--%>
-<%--                                                        </div>--%>
-
                                                     </div>
                                                     <div class="form__group">
                                                         <label class="form__label" for="slg">Số lượng mua</label>
@@ -286,7 +273,7 @@
                                                                value="1" min = "1">
                                                     </div>
                                                     <div class="form__group">
-                                                        <label class="form__label" for="notes">Lời chúc trên bánh</label>
+                                                        <label class="form__label" for="notes">Lời chúc </label>
                                                         <input type="text" id="notes" name="notes" class="form__input text-lowercase"
                                                                placeholder="Chúc mừng sinh nhật....">
                                                     </div>
@@ -294,9 +281,6 @@
 
                                             </div>
                                             <div class="modal__btns">
-<%--                                                <button class="modal__btn modal__btn--apply" type="submit">--%>
-<%--                                                    Xác nhận và đóng--%>
-<%--                                                </button>--%>
                                                 <button onclick="adminAddProInOrder()" class="modal__btn modal__btn--apply" type="submit">
                                                     Xác nhận và đóng
                                                 </button>

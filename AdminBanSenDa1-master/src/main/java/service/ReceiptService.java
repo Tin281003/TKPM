@@ -321,7 +321,7 @@ public class ReceiptService {
         return list.get(0);
     }
 
-
+    //4.3.7. update
     public static void cancelOrder(String mahd) {
         Statement stm = DBConnect.getInstall().get();
         if (stm != null) {
@@ -356,7 +356,7 @@ public class ReceiptService {
     }
 
 
-
+//4.2.10. valid -> 4.2.11. update -> 4.2.12. success -> 4.2.13. Display OI -> 4.2.14. Display the new Order
     public static void updateState(String mahd, int st) {
         Statement stm = DBConnect.getInstall().get();
         if (stm != null) {

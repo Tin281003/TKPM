@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.List;
 
 @WebServlet(name = "Signin", value = "/doSignin")
 public class Signin extends HttpServlet {
@@ -20,6 +19,7 @@ public class Signin extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     }
 
+    //2. Check Login
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String uname = request.getParameter("username");
@@ -47,6 +47,8 @@ public class Signin extends HttpServlet {
 
                     response.sendRedirect(previousPageUrl);
                 } else {
+
+//                    3. Next page
                     response.sendRedirect("/ListReceipt_Admin");
                 }
 

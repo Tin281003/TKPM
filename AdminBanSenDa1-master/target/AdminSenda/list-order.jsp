@@ -146,6 +146,8 @@
             <!-- search -->
             <form action="#" class="main__title-form">
               <input type="text" placeholder="Tìm kiếm..">
+
+<%--              4.1.1. Select view order details--%>
               <button type="button">
                 <i class="fa fa-search"></i>
               </button>
@@ -224,6 +226,8 @@
                   <% } %>
                   <%if(rc.getStatus() == 0 || rc.getStatus() == 1){%>
                   <% if(user.getIsedit() == 1 || user.getRole() == 2) { %>
+
+<%--                  4.2.1. Select edit Orders--%>
                   <a href="AdminEditOrder?id=<%=rc.getId()%>" class="main__table-btn main__table-btn--edit">
                     <i class="fa fa-edit"></i>
                   </a>
@@ -240,10 +244,13 @@
               </td>
             </tr>
             </tbody>
+
+<%--            4.3.1.Select Cancel order --%>
             <!-- modal delete -->
             <div id="modal-delete<%=i%>" class="zoom-anim-dialog mfp-hide modal">
               <h6 class="modal__title">Hủy Đơn Hàng</h6>
 
+<%--              4.3.2. Display notification--%>
               <p class="modal__text">Bạn có chắc muốn hủy đơn hàng này?</p>
 
               <div class="modal__btns">
@@ -262,6 +269,8 @@
 
               <div class="modal__btns">
                 <a href="adminChangeStateOrder?mahd=<%=rc.getId()%>" class="modal__btn modal__btn--apply" type="button">
+
+<%--                  4.3.4. Enter Acceppt--%>
                   Xác nhận
                 </a>
                 <button class="modal__btn modal__btn--dismiss" type="button">Quay lại</button>
