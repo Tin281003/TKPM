@@ -19,7 +19,7 @@ import java.util.List;
 public class EditUser extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-// kiểm tra mã khách hàng để có thể chỉnh sửa thông tin và chuyển đến trang editUser.JSP
+// kiểm tra mã khách hàng chuyển đến trang editUser.JSP
         String makh = request.getParameter("makh");
 
         List<String> listRole = new ArrayList<>();

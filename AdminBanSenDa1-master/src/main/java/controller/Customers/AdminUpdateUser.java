@@ -43,7 +43,7 @@ public class AdminUpdateUser extends HttpServlet {
             role = 2;
         }
         ReceiptService.updateRole(role, makh);
-
+        // gọi tới ham updateProfile(username, phone, address, email, makh, user)
         UserService.updateProfile(username, phone, address, email, makh, user);
 
 
