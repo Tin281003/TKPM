@@ -236,7 +236,7 @@
                 <div class="bg-pink rounded-top p-4">
                     <div class="row">
                         <div class="col-12 col-sm-6 text-center text-sm-start">
-                            &copy; <a href="#">Lập trình web thầy Phan Đình Long  Khoa CNTT - ĐH Nông Lâm TP HCM</a>
+                            &copy; <a href="#">Công nghệ phầm mềm thầy Song</a>
                         </div>
                         <div class="col-12 col-sm-6 text-center text-sm-end">
                            <a href="#">Nhóm 27</a>

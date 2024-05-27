@@ -123,6 +123,7 @@
 
                     <div class="main__title-wrap">
                         <!-- filter sort -->
+<%--                       chức năng sort này sẽ dùng một con servlet là ListProduct_Admin ở controller--%>
                         <div class="filter" id="filter__sort">
                             <span class="filter__item-label">Sắp xếp:</span>
 
@@ -145,10 +146,12 @@
                                     String val;
                                     for (String s : listOption) {
                                         val = request.getParameter("sortValue");
+//                                       //lấy các tham số val truyền vào để sort
                                         if (s.equals(val)) {
                                 %>
                                 <li><a class="text-pink" href="ListProduct_Admin?sortValue=<%=val%>" selected="true"
                                        value="<%=val%>"><%=val%>
+<%--                                    sort--%>
                                 </a></li>
                                 <%} else {%>
                                 <li><a id="sortValue" class="text-pink" href="ListProduct_Admin?sortValue=<%=s%>"
@@ -195,6 +198,7 @@
                     <table class="main__table">
                         <thead>
                         <tr>
+<%--                            bảng sản phẩm--%>
                             <th>STT</th>
                             <th>Mã SP</th>
                             <th>Tên sản phẩm</th>
