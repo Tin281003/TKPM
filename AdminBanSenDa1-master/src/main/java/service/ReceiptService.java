@@ -321,7 +321,7 @@ public class ReceiptService {
         return list.get(0);
     }
 
-    //4.3.7. update
+    //9. update -> 10. success
     public static void cancelOrder(String mahd) {
         Statement stm = DBConnect.getInstall().get();
         if (stm != null) {
@@ -356,7 +356,6 @@ public class ReceiptService {
     }
 
 
-//4.2.10. valid -> 4.2.11. update -> 4.2.12. success -> 4.2.13. Display OI -> 4.2.14. Display the new Order
     public static void updateState(String mahd, int st) {
         Statement stm = DBConnect.getInstall().get();
         if (stm != null) {
@@ -370,7 +369,7 @@ public class ReceiptService {
     }
 
 
-
+    //9. update
     public static void updateStatusUser(String id) {
         Statement statement = DBConnect.getInstall().get();
         int status = UserService.findById(id).getStatus();
@@ -402,9 +401,6 @@ public class ReceiptService {
 
 
     public static void main(String[] args) {
-//        addCTHD("HD13", "B054", 2, "CMSN");
-//        System.out.println(getListCTHD("HD13"));
-//        deleteProInCTHD("HD13", "B054", 6);
         System.out.println(getListMaSpCTHD("HD16"));
     }
 

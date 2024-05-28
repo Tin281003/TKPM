@@ -26,7 +26,6 @@ public class adminRemoveOrderCTKH extends HttpServlet {
 
         User user = (User) session.getAttribute("auth");
 
-
         response.sendRedirect("./EditUser?makh="+ mh );
 
     }

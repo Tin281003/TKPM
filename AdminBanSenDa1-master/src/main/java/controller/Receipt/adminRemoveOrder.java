@@ -11,22 +11,22 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @WebServlet(name = "adminRemoveOrder", value = "/adminRemoveOrder")
-//4.3.5. Load data -> 4.3.6. valid -> 4.3.7. update(model.Recipt) -> 4.3.8. success
 public class adminRemoveOrder extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // 7. Load data
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         HttpSession session = request.getSession(true);
+        // 8. valid
         String mahd = request.getParameter("mahd");
-
+        //9. update
         ReceiptService.updateTonKhoWhenCancelOrder(mahd);
         ReceiptService.cancelOrder(mahd);
 
 
         User user = (User) session.getAttribute("auth");
-
-//        4.3.9. Display -> 4.3.10. Display cancelled status
+//        11. Display -> 12. Display cancelled status
         response.sendRedirect("./ListReceipt_full_Admin");
     }
 
