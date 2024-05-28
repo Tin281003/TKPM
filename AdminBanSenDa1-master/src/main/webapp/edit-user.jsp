@@ -250,7 +250,7 @@ String mkh = (String) request.getAttribute("mkh"); %>
                             <div class="row">
                                 <!-- details form -->
                                 <div class="col-12">
-                                    <!-- 4 người dùng nhập thông tin các user cân chỉnh sửa -->
+                                    <!-- 5 người dùng nhập thông tin các user cân chỉnh sửa -->
                                     <form action="AdminUpdateUser" method="post" class="form form--profile">
                                         <div class="row row--form">
                                             <div class="col-12">
@@ -259,12 +259,12 @@ String mkh = (String) request.getAttribute("mkh"); %>
                                            <input name ="makh" value="<%=mkh%>" style="display: none">
                                             <div class="col-12 col-md-6 col-lg-12 col-xl-6">
                                                 <div class="form__group">
-                                                    <!-- 4.1 chỉnh sửa tên ta khoản -->
+                                                    <!-- 5.1 chỉnh sửa tên ta khoản -->
                                                     <label class="form__label" for="username">Tên tài khoản</label>
                                                     <input id="username" type="text" name="username" class="form__input" value="<%=UserService.findById(mkh).getName()%>">
                                                 </div>
                                                 <div class="form__group">
-                                                    <!-- 4.1 chỉnh sửa SĐT-->
+                                                    <!-- 5.1 chỉnh sửa SĐT-->
                                                     <label class="form__label" for="phone">SĐT</label>
                                                     <input id="phone" type="tel" name="phone" class="form__input text-lowercase" value="<%=CustomerService.getCusByIdAcc(mkh).getSDT()%>">
                                                 </div>
@@ -272,12 +272,12 @@ String mkh = (String) request.getAttribute("mkh"); %>
 
                                             <div class="col-12 col-md-6 col-lg-12 col-xl-6">
                                                 <div class="form__group">
-                                                    <!-- 4.2 chỉnh sửa email-->
+                                                    <!-- 5.2 chỉnh sửa email-->
                                                     <label class="form__label" for="email">Email</label>
                                                     <input id="email" type="email" name="email" class="form__input text-lowercase" value="<%=UserService.findById(mkh).getEmail()%>">
                                                 </div>
                                                 <div class="form__group">
-                                                    <!-- 4.2 chỉnh sửa địa chỉ-->
+                                                    <!-- 5.2 chỉnh sửa địa chỉ-->
                                                     <label class="form__label" for="address">Địa chỉ</label>
                                                     <input id="address" type="text" name="address" class="form__input text-lowercase" value="<%=CustomerService.getCusByIdAcc(mkh).getDIACHI()%>">
                                                 </div>
@@ -302,7 +302,7 @@ String mkh = (String) request.getAttribute("mkh"); %>
                                             </div>
                                             <% if(user.getIsedit() == 1 || user.getRole() == 2) { %>
                                             <div class="col-12 col-md-6 col-lg-12 col-xl-6">
-                                                <!-- 5 người dùng nhan nut luu thong tin  -->
+                                                <!-- 6 người dùng nhan nut luu thong tin  -->
                                             <input id="" class="form__btn" type="submit"  value="Lưu thông tin">
                                             <button  class="form__btn" ><a href="./ListCustomer">cancel</a></button>
                                             </div>

@@ -43,10 +43,10 @@ public class AdminUpdateUser extends HttpServlet {
             role = 2;
         }
         ReceiptService.updateRole(role, makh);
-        // gọi tới ham updateProfile(username, phone, address, email, makh, user)
+        // gọi tới ham updateProfile(username, phone, address, email, makh, user) de check
         UserService.updateProfile(username, phone, address, email, makh, user);
 
-
+        // sau khi sucess and show userUpdate for admin
         response.sendRedirect("./EditUser?makh="+ request.getParameter("makh"));
     }
 }

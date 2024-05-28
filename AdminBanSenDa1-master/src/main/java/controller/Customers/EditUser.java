@@ -19,7 +19,7 @@ import java.util.List;
 public class EditUser extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-// kiểm tra mã khách hàng chuyển đến trang editUser.JSP
+        // kiểm tra mã khách hàng (vaid())
         String makh = request.getParameter("makh");
 
         List<String> listRole = new ArrayList<>();
@@ -38,7 +38,7 @@ public class EditUser extends HttpServlet {
         HttpSession session = request.getSession(true);
         User user = (User) session.getAttribute("auth");
 
-
+        //success() and 4.display EditUser()
         request.getRequestDispatcher("edit-user.jsp").forward(request, response);
     }
 

@@ -190,7 +190,7 @@ public class UserService {
                 " WHERE CUSTOMERS.id = '"+idACC+"' and CUSTOMERS.id = ACCOUNTS.id";
         Statement stm  =  DBConnect.getInstall().get();
         try {
-            // 7. Thực hiện câu lệnh executeUpdate(sql)
+            // 7. Thực hiện câu lệnh executeUpdate(sql) va changedate
             stm.executeUpdate(sql);
             auth.setName(name);
             auth.setEmail(mail);

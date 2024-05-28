@@ -15,10 +15,10 @@ import java.util.List;
 public class ListCustomer extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // xuất thông tin của khách hàng từ data lên
+        // sucess
         List<Customer> listCus = CustomerService.getListCustomer();
         request.setAttribute("listCus", listCus);
-
+        // loaddata and 1.display ListCustomer
         request.getRequestDispatcher("list-customers.jsp").forward(request,response);
     }
 
