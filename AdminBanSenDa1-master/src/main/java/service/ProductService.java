@@ -6,7 +6,9 @@ import model.*;
 import java.sql.*;
 import java.util.*;
 public class ProductService {
+    //        4.Hệ thống kết nối với cơ sở dữ liệu thành công.
     static Connection con = DBConnect.getInstall().getConn();
+    // 5.Hệ thống lấy ra được danh sách các sản phẩm từ CSDL được xử lý ở ProductService.
     public static List<Product> getData()    {
         List<Product> list = new LinkedList<Product>();
         Statement statement = DBConnect.getInstall().get();

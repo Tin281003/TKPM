@@ -17,9 +17,14 @@ import java.util.List;
 public class ListProduct_Admin extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+// 5.Hệ thống lấy ra được danh sách các sản phẩm từ CSDL được xử lý ở ProductService.
         List<Product> list = ProductService.getListProductForAdmin();
         request.setAttribute("listpro", list);
         String sort = request.getParameter("sortValue");
+       // 6. Hệ thống dựa vào tiêu chí ( sắp xếp theo tên,sắp xếp theo giá, sắp xếp theo loại)
+        // người dùng chọn để so sánh các tham số(tên sản phẩm 1, tên sản phẩm 2) của tiêu chí đó.
+        //7.Hệ thống lấy xác nhận và xử lý dữ liệu.
         if (sort != null) {
             if (sort.equals("Sắp xếp theo tên")) {
                 Collections.sort(list, new Comparator<Product>() {
@@ -57,6 +62,7 @@ public class ListProduct_Admin extends HttpServlet {
             endPage++;
         }
 
+        //8.Hệ thống trả về danh sách sản phẩm đã được sắp xếp thành công theo tiêu chí người dùng chọn.
         request.setAttribute("endPage", endPage);
         request.setAttribute("tag", page);
         request.setAttribute("listPa", listPa);

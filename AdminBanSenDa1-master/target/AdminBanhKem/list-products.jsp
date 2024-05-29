@@ -124,6 +124,8 @@
                     <div class="main__title-wrap">
                         <!-- filter sort -->
 <%--                       chức năng sort này sẽ dùng một con servlet là ListProduct_Admin ở controller--%>
+<%--                        1. Hệ thống hiển thị ra mục menu tùy chọn sắp xếp --%>
+<%--                        (mặc định, giá từ thấp đến cao, giá từ cao đến thấp, sắp xếp theo tên, sắp xếp theo loại).--%>
                         <div class="filter" id="filter__sort">
                             <span class="filter__item-label">Sắp xếp:</span>
 
@@ -133,7 +135,7 @@
                                 <span></span>
 
                             </div>
-
+<%--                            2. Người dùng nhấp vào tiêu chí (sắp xếp theo tên,..) muốn sắp xếp.--%>
                             <ul class="filter__item-menu dropdown-menu scrollbar-dropdown"
                                 aria-labelledby="filter-sort">
                                 <%
@@ -149,7 +151,9 @@
 //                                       //lấy các tham số val truyền vào để sort
                                         if (s.equals(val)) {
                                 %>
-                                <li><a class="text-pink" href="ListProduct_Admin?sortValue=<%=val%>" selected="true"
+<%--                                Hệ thống gửi yêu cầu đến cho controller xử lí.--%>
+                                <li>
+                                    <a class="text-pink" href="ListProduct_Admin?sortValue=<%=val%>" selected="true"
                                        value="<%=val%>"><%=val%>
 <%--                                    sort--%>
                                 </a></li>
@@ -211,6 +215,8 @@
                             <th>Tùy chọn</th>
                         </tr>
                         </thead>
+<%--                        8. Hệ thống trả về danh sách sản phẩm đã được sắp xếp thành công theo tiêu chí người dùng chọn.--%>
+<%--                        9. Hệ thống hiển thị ra cho người dùng danh sách sản phẩm đã được sắp xếp.--%>
                         <% List<Product> listPa = (List<Product>) request.getAttribute("listPa");
                             Product pro = null;
                             for (int i = 0; i < listPa.size(); i++) {
